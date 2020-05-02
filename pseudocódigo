@@ -1,0 +1,58 @@
+ Importamos pandas alias pd
+Importamos sys
+
+Diccionario(Alumnos) = {"Angel":[], "Pedro" :[], "Miguel" :[], "Mario" :[], "Julio" :[], \
+                    "Imanol" :[], "Fernanda" :[], "Lizeth" :[], "Diana" :[], "Diego" :[], \
+                    "Fernando" :[], "Oscar" :[], "Daniela" :[], "Karen" :[], "Franco" :[], \
+                    "Isabel" :[], "Arick" :[], "Edson" :[], "Manuel" :[], "Arely" :[], "Gaby" :[], \
+                    "Lalo" :[], "Saul" :[], "Karl" :[], "Carlos" :[], "Melisa" :[], \
+                    "Susana" :[], "Andrea" :[], "Rebeca" :[]}
+Para cada alumno se crea una lista que almacena las calificaciones
+Variable(OP) = 0
+Mientras op diferente a 4:
+Mostrar("1.- Registrar Calificaciones")
+ Mostrar("2.- Mostrar Calificaciones")
+  Mostrar("3.- Mostrar alumnos reprobados")
+  Mostrar("4.- Mostrar Estadistica descriptiva")
+  Mostrar("5.- Salir")
+  Varibale opción igual  se crea una variable nput y se imprime Elige una opción
+
+    si opcion == 1:
+        para e en Alumnos:
+            Mostrar("Nombre Alumno:",e)
+            para i en materias:
+                resultado1 = 0
+                resultado1 = se crea una variable nput y se imprime Cual es la calificacion?
+                Alumnos[e].guardar en lista(resultado1)
+    Sino opcion == 2:
+        opcin2 = pd.DataFrame(Alumnos)
+        opcin2.index = [materias]
+        Mostrar(opcin2.T)
+        
+    Sino opcion == 3:
+        opcin2 = pd.DataFrame(Alumnos)
+        opcin2.index = [materias]
+        var1 = Alumnos.keys()
+        para a en var1:
+            variable_control = Alumnos.get(a,())
+            mostrar(" ")
+            mostrar("Alumno:",a)
+            mostrar("Notas Reprobadas")
+            para e en variable_control:
+                if e < 60:
+                    mostrrar(e)
+        
+    Sino opcion == 4:
+        opcin2 = pd.DataFrame(Alumnos)
+        opcin2.index= [materias]
+        Mostrar("La media Estandart es")
+        Mostrar(opcin2.T.std())
+        Mostrar("El promedio es:")
+        Mostar(opcin2.T.mean)
+        
+    Sino opcion == 5:
+        salir()
+
+    Sino
+        Mostrar (Opcion no valida")
+
